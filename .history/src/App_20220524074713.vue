@@ -1,6 +1,4 @@
 <template>
-"jsx-a11y/label-has-associated-control": "off",
-"jsx-a11y/label-has-for":"off"
    <!-- Header -->
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
@@ -39,7 +37,7 @@
       </div>
     </div>
 
-    <img alt="intro" class="relative block mx-auto mt-5 -mb-20 w-auto max-w-full"
+    <img class="relative block mx-auto mt-5 -mb-20 w-auto max-w-full"
       src="assets/img/introduction-music.png" />
   </section>
 
@@ -53,7 +51,7 @@
       </div>
       <!-- Playlist -->
       <ol id="playlist">
-        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition 
           duration-300 hover:bg-gray-50">
           <div>
             <a href="#" class="font-bold block text-gray-600">Song Title</a>
@@ -67,7 +65,7 @@
             </span>
           </div>
         </li>
-        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition 
           duration-300 hover:bg-gray-50">
           <div>
             <a href="#" class="font-bold block text-gray-600">Song Title</a>
@@ -81,7 +79,7 @@
             </span>
           </div>
         </li>
-        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition 
           duration-300 hover:bg-gray-50">
           <div>
             <a href="#" class="font-bold block text-gray-600">Song Title</a>
@@ -95,7 +93,7 @@
             </span>
           </div>
         </li>
-        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition
+        <li class="flex justify-between items-center p-3 pl-6 cursor-pointer transition 
           duration-300 hover:bg-gray-50">
           <div>
             <a href="#" class="font-bold block text-gray-600">Song Title</a>
@@ -266,7 +264,7 @@
             <i class="fas fa-circle"></i>
           </span>
           <!-- Player Progress Bar-->
-          <span class="block h-2 rounded bg-gradient-to-r from-green-500 to-green-400"
+          <span class="block h-2 rounded bg-gradient-to-r from-green-500 to-green-400" 
             style="width: 50%;"></span>
         </span>
       </div>
@@ -279,7 +277,7 @@
 
   <!-- Auth Modal -->
   <div class="fixed z-10 inset-0 overflow-y-auto hidden" id="modal">
-    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center
+    <div class="flex items-end justify-center min-h-screen pt-4 px-4 pb-20 text-center 
       sm:block sm:p-0">
       <div class="fixed inset-0 transition-opacity">
         <div class="absolute inset-0 bg-gray-800 opacity-75"></div>
@@ -309,7 +307,7 @@
                 bg-blue-600" href="#">Login</a>
             </li>
             <li class="flex-auto text-center">
-              <a class="block rounded py-3 px-4 transition"
+              <a class="block rounded py-3 px-4 transition" 
                 href="#">Register</a>
             </li>
           </ul>
@@ -318,21 +316,19 @@
           <form>
             <!-- Email -->
             <div class="mb-3">
-              <label for="loginemail" class="inline-block mb-2">Email
-                <input id="loginemail" type="email"
+              <label class="inline-block mb-2">Email</label>
+              <input type="email"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Email" />
-              </label>
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="loginpass" class="inline-block mb-2">Password
-                <input type="password" id="loginpass"
+              <label class="inline-block mb-2">Password</label>
+              <input type="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Password" />
-              </label>
             </div>
             <button type="submit"
               class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition
@@ -344,65 +340,58 @@
           <form>
             <!-- Name -->
             <div class="mb-3">
-              <label for="name" class="inline-block mb-2">Name
-                <input type="text" id="name"
+              <label class="inline-block mb-2">Name</label>
+              <input type="text"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Name" />
-              </label>
             </div>
             <!-- Email -->
             <div class="mb-3">
-              <label for="email" class="inline-block mb-2">Email
-                <input type="email" id="email"
+              <label class="inline-block mb-2">Email</label>
+              <input type="email"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Email" />
-              </label>
             </div>
             <!-- Age -->
             <div class="mb-3">
-              <label for="age" class="inline-block mb-2">Age
-                <input type="number" id="age"
+              <label class="inline-block mb-2">Age</label>
+              <input type="number"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded" />
-              </label>
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="password" class="inline-block mb-2">Password
-                <input type="password" id="password"
+              <label class="inline-block mb-2">Password</label>
+              <input type="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Password" />
-              </label>
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">
-              <label for="confirm" class="inline-block mb-2">Confirm Password
-                <input type="password" id="confirm"
+              <label class="inline-block mb-2">Confirm Password</label>
+              <input type="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Confirm Password" />
-              </label>
             </div>
             <!-- Country -->
             <div class="mb-3">
-              <label for="country" class="inline-block mb-2">Country
-                <select id="country"
-                  class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                    duration-500 focus:outline-none focus:border-black rounded">
-                  <option value="USA">USA</option>
-                  <option value="Mexico">Mexico</option>
-                  <option value="Germany">Germany</option>
-                </select>
-              </label>
+              <label class="inline-block mb-2">Country</label>
+              <select
+                class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
+                  duration-500 focus:outline-none focus:border-black rounded">
+                <option value="USA">USA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Germany">Germany</option>
+              </select>
             </div>
             <!-- TOS -->
             <div class="mb-3 pl-6">
-              <label class="inline-block" for="terms">Accept terms of service
-                <input type="checkbox" id="terms" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
-              </label>
+              <input type="checkbox" id="terms" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
+              <label class="inline-block" for="terms">Accept terms of service</label>
             </div>
             <button type="submit"
               class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition

@@ -1,6 +1,5 @@
 <template>
-"jsx-a11y/label-has-associated-control": "off",
-"jsx-a11y/label-has-for":"off"
+/* eslint-disable */
    <!-- Header -->
   <header id="header" class="bg-gray-700">
     <nav class="container mx-auto flex justify-start items-center py-5 px-4">
@@ -318,21 +317,19 @@
           <form>
             <!-- Email -->
             <div class="mb-3">
-              <label for="loginemail" class="inline-block mb-2">Email
-                <input id="loginemail" type="email"
+              <label for="loginemail" class="inline-block mb-2">Email</label>
+              <input type="email" id="loginemail"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Email" />
-              </label>
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="loginpass" class="inline-block mb-2">Password
-                <input type="password" id="loginpass"
+              <label for="loginpass" class="inline-block mb-2">Password</label>
+              <input type="password" id="loginpass"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Password" />
-              </label>
             </div>
             <button type="submit"
               class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition
@@ -344,65 +341,58 @@
           <form>
             <!-- Name -->
             <div class="mb-3">
-              <label for="name" class="inline-block mb-2">Name
-                <input type="text" id="name"
+              <label for="name" class="inline-block mb-2">Name</label>
+              <input type="text" id="name"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Name" />
-              </label>
             </div>
             <!-- Email -->
             <div class="mb-3">
-              <label for="email" class="inline-block mb-2">Email
-                <input type="email" id="email"
+              <label for="email" class="inline-block mb-2">Email</label>
+              <input type="email" id="email"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Email" />
-              </label>
             </div>
             <!-- Age -->
             <div class="mb-3">
-              <label for="age" class="inline-block mb-2">Age
-                <input type="number" id="age"
+              <label for="age" class="inline-block mb-2">Age</label>
+              <input type="number" id="age"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded" />
-              </label>
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="password" class="inline-block mb-2">Password
-                <input type="password" id="password"
+              <label for="password" class="inline-block mb-2">Password</label>
+              <input type="password" id="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Password" />
-              </label>
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">
-              <label for="confirm" class="inline-block mb-2">Confirm Password
-                <input type="password" id="confirm"
+              <label for="confirm" class="inline-block mb-2">Confirm Password</label>
+              <input type="password" id="confirm"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Confirm Password" />
-              </label>
             </div>
             <!-- Country -->
             <div class="mb-3">
-              <label for="country" class="inline-block mb-2">Country
-                <select id="country"
-                  class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                    duration-500 focus:outline-none focus:border-black rounded">
-                  <option value="USA">USA</option>
-                  <option value="Mexico">Mexico</option>
-                  <option value="Germany">Germany</option>
-                </select>
-              </label>
+              <label for="country" class="inline-block mb-2">Country</label>
+              <select id="country"
+                class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
+                  duration-500 focus:outline-none focus:border-black rounded">
+                <option value="USA">USA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Germany">Germany</option>
+              </select>
             </div>
             <!-- TOS -->
             <div class="mb-3 pl-6">
-              <label class="inline-block" for="terms">Accept terms of service
-                <input type="checkbox" id="terms" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
-              </label>
+              <input type="checkbox" id="terms" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
+              <label class="inline-block" for="terms">Accept terms of service</label>
             </div>
             <button type="submit"
               class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition

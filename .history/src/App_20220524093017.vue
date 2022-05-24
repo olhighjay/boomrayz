@@ -380,29 +380,26 @@
             <!-- Confirm Password -->
             <div class="mb-3">
               <label for="confirm" class="inline-block mb-2">Confirm Password
-                <input type="password" id="confirm"
+              <input type="password" id="confirm"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Confirm Password" />
-              </label>
             </div>
             <!-- Country -->
             <div class="mb-3">
-              <label for="country" class="inline-block mb-2">Country
-                <select id="country"
-                  class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
-                    duration-500 focus:outline-none focus:border-black rounded">
-                  <option value="USA">USA</option>
-                  <option value="Mexico">Mexico</option>
-                  <option value="Germany">Germany</option>
-                </select>
-              </label>
+              <label for="country" class="inline-block mb-2">Country</label>
+              <select id="country"
+                class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
+                  duration-500 focus:outline-none focus:border-black rounded">
+                <option value="USA">USA</option>
+                <option value="Mexico">Mexico</option>
+                <option value="Germany">Germany</option>
+              </select>
             </div>
             <!-- TOS -->
             <div class="mb-3 pl-6">
-              <label class="inline-block" for="terms">Accept terms of service
-                <input type="checkbox" id="terms" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
-              </label>
+              <input type="checkbox" id="terms" class="w-4 h-4 float-left -ml-6 mt-1 rounded" />
+              <label class="inline-block" for="terms">Accept terms of service</label>
             </div>
             <button type="submit"
               class="block w-full bg-purple-600 text-white py-1.5 px-3 rounded transition
