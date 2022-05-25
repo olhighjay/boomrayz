@@ -22,8 +22,8 @@ module.exports = {
           some: ['nesting', 'id'],
         },
         allowChildren: false,
-      },
-    ],
+      }
+    ]
   },
   overrides: [
     {

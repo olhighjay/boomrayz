@@ -13,17 +13,16 @@ module.exports = {
   rules: {
     'no-console': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
     'no-debugger': process.env.NODE_ENV === 'production' ? 'warn' : 'off',
-    'vuejs-accessibility/label-has-for': [
-      'error',
-      {
-        components: ['VLabel'],
-        controlComponents: ['VInput'],
-        required: {
-          some: ['nesting', 'id'],
-        },
-        allowChildren: false,
+    'jsx-a11y/label-has-associated-control': ['error', {
+      required: {
+        some: ['nesting', 'id'],
       },
-    ],
+    }],
+    'jsx-a11y/label-has-for': ['error', {
+      required: {
+        some: ['nesting', 'id'],
+      },
+    }],
   },
   overrides: [
     {

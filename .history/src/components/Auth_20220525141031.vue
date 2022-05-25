@@ -71,7 +71,7 @@
             <!-- Name -->
             <div class="mb-3">
               <label for="name" class="inline-block mb-2">Name </label>
-                <vee-field type="text" name="name"
+                <v-field type="text" name="name"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Name" />
@@ -144,9 +144,11 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex';
+import { Field as VField } from 'vee-validate';
 
 export default {
   name: 'AppAuth',
+  components: { VField },
   data() {
     return {
       tab: 'login',
