@@ -20,16 +20,13 @@
   </header>
 </template>
 <script>
-import { mapMutations } from 'vuex';
-
 export default {
   name: 'HomeHeader',
   methods: {
-    ...mapMutations(['toggleAuthModal']),
-    // toggleAuthModal() {
-    //   this.toggleAuthModal();
-    //   console.log(this.$store.state.authModalShow);
-    // },
+    toggleAuthModal() {
+      this.$store.state.authModalShow = !this.$store.state.authModalShow;
+      console.log(this.$store.state.authModalShow);
+    },
   },
 };
 </script>

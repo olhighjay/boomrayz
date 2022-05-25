@@ -70,7 +70,7 @@
           <form v-show="tab==='register'">
             <!-- Name -->
             <div class="mb-3">
-              <label for="name" class="inline-block w-full mb-2">Name
+              <label for="name" class="inline-block mb-2">Name
                 <input type="text" id="name"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -79,7 +79,7 @@
             </div>
             <!-- Email -->
             <div class="mb-3">
-              <label for="email" class="inline-block w-full mb-2">Email
+              <label for="email" class="inline-block mb-2">Email
                 <input type="email" id="email"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -88,7 +88,7 @@
             </div>
             <!-- Age -->
             <div class="mb-3">
-              <label for="age" class="inline-block w-full mb-2">Age
+              <label for="age" class="inline-block mb-2">Age
                 <input type="number" id="age"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded" />
@@ -96,7 +96,7 @@
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="password" class="inline-block w-full mb-2">Password
+              <label for="password" class="inline-block mb-2">Password
                 <input type="password" id="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -105,7 +105,7 @@
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">
-              <label for="confirm" class="inline-block w-full mb-2">Confirm Password
+              <label for="confirm" class="inline-block mb-2">Confirm Password
                 <input type="password" id="confirm"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -114,7 +114,7 @@
             </div>
             <!-- Country -->
             <div class="mb-3">
-              <label for="country" class="inline-block w-full mb-2">Country
+              <label for="country" class="inline-block mb-2">Country
                 <select id="country"
                   class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                     duration-500 focus:outline-none focus:border-black rounded">

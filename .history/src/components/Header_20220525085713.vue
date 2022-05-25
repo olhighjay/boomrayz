@@ -26,10 +26,10 @@ export default {
   name: 'HomeHeader',
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    // toggleAuthModal() {
-    //   this.toggleAuthModal();
-    //   console.log(this.$store.state.authModalShow);
-    // },
+    toggleAuthModal() {
+      this.toggleAuthModal();
+      console.log(this.$store.state.authModalShow);
+    },
   },
 };
 </script>

@@ -28,32 +28,29 @@
           <ul class="flex flex-wrap mb-4">
             <li class="flex-auto text-center">
               <a class="block rounded py-3 px-4 transition"
-              :class="{'hover:text-white text-white bg-blue-600': tab === 'login',
-              'hover:text-blue-600': tab === 'register'}"
+              :class="{'hover:text-white text-white bg-blue-600': tab = 'login', 'hover:text-blue-600': tab = 'register'}" 
               href="javascript:;" @click.prevent="tab = 'login'">Login</a>
             </li>
             <li class="flex-auto text-center">
               <a class="block rounded py-3 px-4 transition"
-              :class="{'hover:text-white text-white bg-blue-600': tab === 'register',
-              'hover:text-blue-600': tab === 'login'}"
                 href="javascript:;" @click.prevent="tab = 'register'">Register</a>
             </li>
           </ul>
 
           <!-- Login Form -->
-          <form v-show="tab==='login'">
+          <form>
             <!-- Email -->
             <div class="mb-3">
-              <label for="loginemail" class="inline-block w-full mb-2">Email
+              <label for="loginemail" class="inline-block mb-2">Email
                 <input id="loginemail" type="email"
-                class="block py-1.5 px-3 text-gray-800 w-full border border-gray-300 transition
+                class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
                 placeholder="Enter Email" />
               </label>
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="loginpass" class="inline-block w-full mb-2">Password
+              <label for="loginpass" class="inline-block mb-2">Password
                 <input type="password" id="loginpass"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -67,10 +64,10 @@
             </button>
           </form>
           <!-- Registration Form -->
-          <form v-show="tab==='register'">
+          <form>
             <!-- Name -->
             <div class="mb-3">
-              <label for="name" class="inline-block w-full mb-2">Name
+              <label for="name" class="inline-block mb-2">Name
                 <input type="text" id="name"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -79,7 +76,7 @@
             </div>
             <!-- Email -->
             <div class="mb-3">
-              <label for="email" class="inline-block w-full mb-2">Email
+              <label for="email" class="inline-block mb-2">Email
                 <input type="email" id="email"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -88,7 +85,7 @@
             </div>
             <!-- Age -->
             <div class="mb-3">
-              <label for="age" class="inline-block w-full mb-2">Age
+              <label for="age" class="inline-block mb-2">Age
                 <input type="number" id="age"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded" />
@@ -96,7 +93,7 @@
             </div>
             <!-- Password -->
             <div class="mb-3">
-              <label for="password" class="inline-block w-full mb-2">Password
+              <label for="password" class="inline-block mb-2">Password
                 <input type="password" id="password"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -105,7 +102,7 @@
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">
-              <label for="confirm" class="inline-block w-full mb-2">Confirm Password
+              <label for="confirm" class="inline-block mb-2">Confirm Password
                 <input type="password" id="confirm"
                 class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                   duration-500 focus:outline-none focus:border-black rounded"
@@ -114,7 +111,7 @@
             </div>
             <!-- Country -->
             <div class="mb-3">
-              <label for="country" class="inline-block w-full mb-2">Country
+              <label for="country" class="inline-block mb-2">Country
                 <select id="country"
                   class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
                     duration-500 focus:outline-none focus:border-black rounded">
