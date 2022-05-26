@@ -68,7 +68,7 @@
           </form>
           <!-- Registration Form -->
           <vee-form v-show="tab==='register'" :validation-schema="schema"
-          @submit="register" :initial-values="userData">
+          @submit="register">
             <!-- Name -->
             <div class="mb-3">
               <label for="name" class="inline-block mb-2">Name </label>
@@ -98,14 +98,10 @@
             <!-- Password -->
             <div class="mb-3">
               <label for="password" class="inline-block w-full mb-2">Password</label>
-                <vee-field name="password" :bails="false" v-slot="{ field, errors }">
-                  <input class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300
-                  transition duration-500 focus:outline-none focus:border-black rounded"
-                  type="password" id="password" placeholder="Password" v-bind="field" />
-                  <div class="text-red-600" v-for="error in errors" :key="error">
-                    {{ error }}
-                  </div>
-                </vee-field>
+                <vee-field type="password" id="password" name="password"
+                class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300 transition
+                  duration-500 focus:outline-none focus:border-black rounded"
+                placeholder="Password" />
               <ErrorMessage class="text-red-600" name="password" />
             </div>
             <!-- Confirm Password -->
@@ -166,9 +162,6 @@ export default {
         country: 'required|excluded:Antarctica',
         tos: 'required',
       },
-      userData: {
-        country: 'USA',
-      },
     };
   },
   computed: {
@@ -185,3 +178,24 @@ export default {
   },
 };
 </script>
+
+
+
+
+
+
+
+TRANSPORTATION
+MGS Transportation//
+
+MGS Luxury Auto//
+  MGS Car rental//
+  Non medical transportation
+
+MGS Investment
+
+MGS Travels
+
+Midas luxury designs
+
+Oil &n gas

@@ -68,7 +68,7 @@
           </form>
           <!-- Registration Form -->
           <vee-form v-show="tab==='register'" :validation-schema="schema"
-          @submit="register" :initial-values="userData">
+          @submit="register" :initial-values>
             <!-- Name -->
             <div class="mb-3">
               <label for="name" class="inline-block mb-2">Name </label>
@@ -101,12 +101,12 @@
                 <vee-field name="password" :bails="false" v-slot="{ field, errors }">
                   <input class="block w-full py-1.5 px-3 text-gray-800 border border-gray-300
                   transition duration-500 focus:outline-none focus:border-black rounded"
-                  type="password" id="password" placeholder="Password" v-bind="field" />
+                  type="password" id="password" placeholder="Password" />
                   <div class="text-red-600" v-for="error in errors" :key="error">
-                    {{ error }}
+                    {{ error }} {{ field }}
                   </div>
                 </vee-field>
-              <ErrorMessage class="text-red-600" name="password" />
+              <ErrorMessage class="text-red-600" name="password" v-bind="field" />
             </div>
             <!-- Confirm Password -->
             <div class="mb-3">

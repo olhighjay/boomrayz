@@ -3,8 +3,7 @@ import {
 } from 'vee-validate';
 import {
   required, min, max, alpha_spaces as alphaSpaces, email,
-  min_value as minVal, max_value as maxVal, confirmed,
-  not_one_of as excluded,
+  min_value as minVal, max_value as maxVal,
 } from '@vee-validate/rules';
 
 export default {
@@ -20,7 +19,5 @@ export default {
     defineRule('email', email);
     defineRule('min_value', minVal);
     defineRule('max_value', maxVal);
-    defineRule('confirmed', confirmed);
-    defineRule('excluded', excluded);
   },
 };
