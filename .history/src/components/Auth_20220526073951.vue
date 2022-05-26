@@ -164,7 +164,7 @@ export default {
         password: 'required|min:3|max:100',
         confirm_password: 'passwords_mismatch:@password',
         country: 'required|country_excluded:Antarctica',
-        tos: 'tos',
+        tos: 'required',
       },
       userData: {
         country: 'USA',

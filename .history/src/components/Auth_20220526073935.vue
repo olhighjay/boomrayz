@@ -163,8 +163,8 @@ export default {
         age: 'required|min_value:18|max_value:100',
         password: 'required|min:3|max:100',
         confirm_password: 'passwords_mismatch:@password',
-        country: 'required|country_excluded:Antarctica',
-        tos: 'tos',
+        country: 'required|excluded:Antarctica',
+        tos: 'required',
       },
       userData: {
         country: 'USA',

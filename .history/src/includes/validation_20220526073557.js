@@ -36,16 +36,13 @@ export default {
           min_value: `The field ${ctx.field} is too low.`,
           max_value: `The field ${ctx.field} is too high.`,
           excluded: `You are not allowed to use this value for the field ${ctx.field}.`,
-          country_excluded: 'Due to restrictions, we do not accept users from this location.',
+          country_excluded: `YDue to restrictions, we do not accept users from this location ${ctx.field}.`,
           passwords_mismatch: "The passwords don't match",
           tos: 'You must accept the terms of service',
-        };
+        },
 
-        const message = messages[ctx.rule.name] ? messages[ctx.rule.name]
-          : `the field ${ctx.field} in invalid`;
-
-        return message;
-      },
+        const message = messages[ctx.rule.name]
+      }
     });
   },
 };
