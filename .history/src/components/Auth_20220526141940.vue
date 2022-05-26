@@ -41,9 +41,9 @@
           </ul>
 
           <!-- Login Form -->
-          <app-login-form v-if="tab==='login'"></app-login-form>
+          <app-login-form></app-login-form>
           <!-- Registration Form -->
-          <app-register-form v-else></app-register-form>
+          <app-register-form></app-register-form>
         </div>
       </div>
     </div>

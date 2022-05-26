@@ -41,9 +41,9 @@
           </ul>
 
           <!-- Login Form -->
-          <app-login-form v-if="tab==='login'"></app-login-form>
+
           <!-- Registration Form -->
-          <app-register-form v-else></app-register-form>
+
         </div>
       </div>
     </div>
@@ -52,18 +52,16 @@
 
 <script>
 import { mapMutations, mapState } from 'vuex';
-import AppRegisterForm from './RegisterForm.vue';
-import AppLoginForm from './LoginForm.vue';
 
 export default {
   name: 'AppAuth',
-  components: {
-    AppRegisterForm,
-    AppLoginForm,
-  },
   data() {
     return {
       tab: 'login',
+      loginSchema: {
+        email: 'required|email',
+        password: 'required',
+      },
     };
   },
   computed: {
@@ -74,6 +72,19 @@ export default {
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
+    register(values) {
+      this.reg_in_submission = true;
+      this.reg_show_alert = true;
+      this.reg_alert_variant = 'bg-blue-500';
+      this.reg_alert_message = 'Please wait! Your account is being created';
+
+      // this.reg_in_submission = true;
+      // this.reg_show_alert = true;
+      this.reg_alert_variant = 'bg-green-500';
+      this.reg_alert_message = 'Success! Your account has been   created';
+
+      console.log(values);
+    },
   },
 };
 </script>

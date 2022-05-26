@@ -48,8 +48,7 @@ export default {
       },
       validateOnBlur: true,
       validateOnChange: true,
-      validateOnInput: false,
-      validateOnModelUpdate: true,
+      validateOnInput: false
     });
   },
 };

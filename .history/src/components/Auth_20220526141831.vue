@@ -41,9 +41,9 @@
           </ul>
 
           <!-- Login Form -->
-          <app-login-form v-if="tab==='login'"></app-login-form>
+
           <!-- Registration Form -->
-          <app-register-form v-else></app-register-form>
+
         </div>
       </div>
     </div>
@@ -51,15 +51,15 @@
 </template>
 
 <script>
-import { mapMutations, mapState } from 'vuex';
 import AppRegisterForm from './RegisterForm.vue';
 import AppLoginForm from './LoginForm.vue';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'AppAuth',
   components: {
     AppRegisterForm,
-    AppLoginForm,
+    AppLoginForm
   },
   data() {
     return {

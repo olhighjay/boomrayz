@@ -50,6 +50,7 @@ export default {
       validateOnChange: true,
       validateOnInput: false,
       validateOnModelUpdate: true,
+      
     });
   },
 };

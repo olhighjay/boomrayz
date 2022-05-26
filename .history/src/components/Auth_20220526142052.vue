@@ -43,7 +43,7 @@
           <!-- Login Form -->
           <app-login-form v-if="tab==='login'"></app-login-form>
           <!-- Registration Form -->
-          <app-register-form v-else></app-register-form>
+          <app-register-form v-if="tab==='register'"></app-register-form>
         </div>
       </div>
     </div>
