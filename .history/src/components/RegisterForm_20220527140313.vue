@@ -123,21 +123,20 @@ export default {
         return;
       }
 
-      try {
-        await usersCollection.add({
-          name: values.name,
-          email: values.email,
-          age: values.age,
-          country: values.country,
-        });
-      } catch (error) {
-        this.reg_in_submission = false;
-        this.reg_alert_variant = 'bg-red-500';
-        this.reg_alert_message = 'An unexpected error occured. Please try again later.';
-        return;
-      }
+    try {
+      await usersCollection.add({
+        name: values.name,
+        email: values.email,
+        age: values.age,
+        country: values.country,
+      });
+    } catch(error) {
+        
+    }
 
-      this.$store.commit('toggleAuth');
+      // this.reg_in_submission = true;
+      // this.reg_show_alert = true;
+      this.reg_alert_variant = 'bg-green-500';
       this.reg_alert_message = 'Success! Your account has been   created';
 
       console.log(userCredentials);

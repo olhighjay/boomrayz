@@ -137,7 +137,7 @@ export default {
         return;
       }
 
-      this.$store.commit('toggleAuth');
+      this.$store.commit('toggle');
       this.reg_alert_message = 'Success! Your account has been   created';
 
       console.log(userCredentials);
