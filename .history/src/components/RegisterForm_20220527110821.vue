@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import { auth, usersCollection } from '@/includes/firebase';
+import { auth, db } from '@/includes/firebase';
 
 export default {
   name: 'RegisterForm',
@@ -122,13 +122,6 @@ export default {
         this.reg_alert_message = 'An unexpected error occured. Please try again later.';
         return;
       }
-
-      await usersCollection.add({
-        name: values.name,
-        email: values.email,
-        age: values.age,
-        country: values.country,
-      });
 
       // this.reg_in_submission = true;
       // this.reg_show_alert = true;

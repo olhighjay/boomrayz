@@ -123,11 +123,11 @@ export default {
         return;
       }
 
-      await usersCollection.add({
-        name: values.name,
-        email: values.email,
-        age: values.age,
-        country: values.country,
+      usersCollection.add({
+          name: values.name,
+          email: values.email,
+          age: values.age,
+          country: values.country,
       });
 
       // this.reg_in_submission = true;

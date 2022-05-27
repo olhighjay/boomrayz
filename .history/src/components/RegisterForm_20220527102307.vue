@@ -82,7 +82,7 @@
 </template>
 
 <script>
-import { auth, usersCollection } from '@/includes/firebase';
+import firebase from '@/includes/firebase';
 
 export default {
   name: 'RegisterForm',
@@ -115,7 +115,8 @@ export default {
 
       let userCredentials = null;
       try {
-        userCredentials = await auth.createUserWithEmailAndPassword(values.email, values.password);
+        userCredentials = await firebase.auth()
+        .createUserWithEmailAndPassword(values.email, values.password);
       } catch (error) {
         this.reg_in_submission = false;
         this.reg_alert_variant = 'bg-red-500';
@@ -123,19 +124,12 @@ export default {
         return;
       }
 
-      await usersCollection.add({
-        name: values.name,
-        email: values.email,
-        age: values.age,
-        country: values.country,
-      });
-
       // this.reg_in_submission = true;
       // this.reg_show_alert = true;
       this.reg_alert_variant = 'bg-green-500';
       this.reg_alert_message = 'Success! Your account has been   created';
 
-      console.log(userCredentials);
+      console.log(values);
     },
   },
 };
