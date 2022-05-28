@@ -32,7 +32,7 @@ export default createStore({
 
       await userCredentials.user.updateProfile({
         displayName: payload.name,
-      });
+      })
 
       commit('toggleAuth');
     },

@@ -31,8 +31,8 @@ export default createStore({
       });
 
       await userCredentials.user.updateProfile({
-        displayName: payload.name,
-      });
+        displayName:  
+      })
 
       commit('toggleAuth');
     },

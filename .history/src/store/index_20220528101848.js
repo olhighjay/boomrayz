@@ -18,23 +18,17 @@ export default createStore({
     authModalShow: (state) => state.authModalShow,
   },
   actions: {
-    async register({ commit }, payload) {
-      const userCredentials = await auth
-        .createUserWithEmailAndPassword(payload.email, payload.password);
+    async register(ctx, payload) {
+      await auth.createUserWithEmailAndPassword(payload.email, payload.password);
 
-      // await usersCollection.add({
-      await usersCollection.doc(userCredentials.user.uid).set({
+      await usersCollection.add({
         name: payload.name,
         email: payload.email,
         age: payload.age,
         country: payload.country,
       });
 
-      await userCredentials.user.updateProfile({
-        displayName: payload.name,
-      });
-
-      commit('toggleAuth');
-    },
-  },
+      this.commit('toggleAuth');
+    }
+  }
 });

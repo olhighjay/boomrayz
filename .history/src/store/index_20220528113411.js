@@ -30,9 +30,7 @@ export default createStore({
         country: payload.country,
       });
 
-      await userCredentials.user.updateProfile({
-        displayName: payload.name,
-      });
+      await userCredentials.user.updateProfile
 
       commit('toggleAuth');
     },
