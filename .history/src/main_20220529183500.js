@@ -9,12 +9,14 @@ import './assets/main.css';
 
 let app;
 
-auth.onAuthStateChanged(() => {
-  if (!app) {
-    app = createApp(App);
-    app.use(store);
-    app.use(router);
-    app.use(veeValidatePlugin);
-    app.mount('#app');
-  }
-});
+auth.onAuthStateChanged( () => {
+    if(!app){
+        app = createApp(App);
+        app.use(store);
+        app.use(router);
+        app.use(veeValidatePlugin);
+        app.mount('#app');
+    }
+})
+
+

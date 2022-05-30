@@ -7,34 +7,32 @@
         <!-- Primary Navigation -->
         <ul class="flex flex-row mt-1">
           <!-- Navigation Links -->
-          <li v-if="!userLoggedIn">
+          <li>
             <a class="px-2 text-white" href="#" @click.prevent="toggleAuthModal">
                 Login / Register</a>
           </li>
-          <template v-else>
-            <li>
-              <a class="px-2 text-white" href="#">Manage</a>
-            </li>
-            <li>
-              <a @click.prevent="signout" class="px-2 text-white" href="#">Logout</a>
-            </li>
-          </template>
+          <li>
+            <a class="px-2 text-white" href="#">Manage</a>
+          </li>
         </ul>
       </div>
     </nav>
   </header>
 </template>
 <script>
-import { mapMutations, mapState, mapActions } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'HomeHeader',
   computed: {
-    ...mapState(['userLoggedIn']),
-  },
+     ...mapState('userLoggedIn')
+  }
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    ...mapActions(['signout']),
+    // toggleAuthModal() {
+    //   this.toggleAuthModal();
+    //   console.log(this.$store.state.authModalShow);
+    // },
   },
 };
 </script>

@@ -47,7 +47,8 @@ export default createStore({
       }
     },
     async signout({ commit }) {
-      await auth.signOut();
+      console.log('hello there');
+      await auth.signout;
       commit('toggleAuth');
     },
   },

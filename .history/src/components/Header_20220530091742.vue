@@ -16,7 +16,7 @@
               <a class="px-2 text-white" href="#">Manage</a>
             </li>
             <li>
-              <a @click.prevent="signout" class="px-2 text-white" href="#">Logout</a>
+              <a class="px-2 text-white" href="#">Logout</a>
             </li>
           </template>
         </ul>
@@ -34,7 +34,10 @@ export default {
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    ...mapActions(['signout']),
+    ...mapActions([''])
+    signout() {
+      this.$store.dispatch('signout');
+    },
   },
 };
 </script>

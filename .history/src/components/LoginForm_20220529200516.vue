@@ -47,25 +47,18 @@ export default {
     };
   },
   methods: {
-    async login(values) {
+    login(values) {
       this.log_in_submission = true;
       this.log_show_alert = true;
       this.log_alert_variant = 'bg-blue-500';
       this.log_alert_message = 'Please wait! We are logging you in.';
-      try {
-        await this.$store.dispatch('login', values);
-      } catch (error) {
-        this.log_in_submission = false;
-        this.log_alert_variant = 'bg-red-500';
-        this.log_alert_message = 'Invalid login details.';
-        return;
-      }
 
+        this.$store.dispatch()
       //   this.log_in_submission = false;
       //   this.log_show_alert = false;
       this.log_alert_variant = 'bg-green-500';
       this.log_alert_message = 'Success! You are now logged in.';
-      window.location.reload();
+      console.log(values);
     },
   },
 };

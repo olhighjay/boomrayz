@@ -15,9 +15,6 @@
             <li>
               <a class="px-2 text-white" href="#">Manage</a>
             </li>
-            <li>
-              <a @click.prevent="signout" class="px-2 text-white" href="#">Logout</a>
-            </li>
           </template>
         </ul>
       </div>
@@ -25,16 +22,19 @@
   </header>
 </template>
 <script>
-import { mapMutations, mapState, mapActions } from 'vuex';
+import { mapMutations, mapState } from 'vuex';
 
 export default {
   name: 'HomeHeader',
   computed: {
-    ...mapState(['userLoggedIn']),
+     ...mapState('userLoggedIn')
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    ...mapActions(['signout']),
+    // toggleAuthModal() {
+    //   this.toggleAuthModal();
+    //   console.log(this.$store.state.authModalShow);
+    // },
   },
 };
 </script>
