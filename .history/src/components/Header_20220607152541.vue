@@ -39,8 +39,9 @@ export default {
   methods: {
     ...mapMutations(['toggleAuthModal']),
     signout() {
-      this.$store.dispatch('signout');
-      if (this.$route.nmeta.requiresAuth) {
+      console.log(this.$router.name);
+      // this.$store.dispatch('signout');
+      if (this.$router.name === 'manage') {
         this.$router.push({ name: 'home' });
       }
     },

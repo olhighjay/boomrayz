@@ -29,7 +29,7 @@
   </header>
 </template>
 <script>
-import { mapMutations, mapState } from 'vuex';
+import { mapMutations, mapState, mapActions } from 'vuex';
 
 export default {
   name: 'HomeHeader',
@@ -38,12 +38,7 @@ export default {
   },
   methods: {
     ...mapMutations(['toggleAuthModal']),
-    signout() {
-      this.$store.dispatch('signout');
-      if (this.$route.nmeta.requiresAuth) {
-        this.$router.push({ name: 'home' });
-      }
-    },
+    ...mapActions(['signout']),
   },
 };
 </script>

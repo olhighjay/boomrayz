@@ -39,10 +39,13 @@ const router = createRouter({
 router.beforeEach((to, from, next) => {
   if (!to.matched.some((record) => record.meta.requiresAuth)) {
     next();
-  } else if (store.state.userLoggedIn) {
-    next();
+    return;
   } else {
-    next({ name: 'home' });
+    if (store.state.userLoggedIn) {
+      next();
+    } else {
+      next({name: 'home'})
+    }
   }
 });
 export default router;

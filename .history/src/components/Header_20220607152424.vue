@@ -40,7 +40,7 @@ export default {
     ...mapMutations(['toggleAuthModal']),
     signout() {
       this.$store.dispatch('signout');
-      if (this.$route.nmeta.requiresAuth) {
+      if (this.$router.name === 'manage') {
         this.$router.push({ name: 'home' });
       }
     },
