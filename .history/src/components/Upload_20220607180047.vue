@@ -58,9 +58,9 @@ export default {
     };
   },
   methods: {
-    upload() {
-      this.is_dragover = false;
-    },
+      upload() {
+          this.is_dragover = false;
+      },
   },
 };
 </script>

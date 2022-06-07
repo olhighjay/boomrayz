@@ -11,14 +11,13 @@
               class="w-full px-10 py-20 rounded text-center cursor-pointer border border-dashed
                 border-gray-400 text-gray-400 transition duration-500 hover:text-white
                 hover:bg-green-400 hover:border-green-400 hover:border-solid"
-                :class="{'bg-green-400 border-green-400 border-solid': is_dragover}"
-              @drag.prevent.stop=""
-              @dragstart.prevent.stop=""
-              @dragend.prevent.stop="is_dragover = false"
-              @dragover.prevent.stop="is_dragover = true"
-              @dragenter.prevent.stop="is_dragover = true"
-              @dragleave.prevent.stop="is_dragover = false"
-              @drop.prevent.stop="upload"
+              @drag=""
+              @dragstart=""
+              @dragend=""
+              @dragover=""
+              @dragenter=""
+              @dragleave=""
+              @drop=""
             >
               <h5>Drop your files here</h5>
             </div>
@@ -52,15 +51,5 @@
 <script>
 export default {
   name: 'UploadComponent',
-  data() {
-    return {
-      is_dragover: false,
-    };
-  },
-  methods: {
-    upload() {
-      this.is_dragover = false;
-    },
-  },
 };
 </script>
