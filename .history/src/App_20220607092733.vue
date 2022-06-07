@@ -1,7 +1,7 @@
 <template>
    <!-- Header -->
     <app-header />
-    <router-view></router-view>
+      <home-view></home-view>
   <!-- Player -->
   <div class="fixed bottom-0 left-0 bg-white p-5 pb-4 text-left align-top w-full h-16">
     <div class="relative">
@@ -45,10 +45,11 @@
 <script>
 import AppHeader from './components/Header.vue';
 import AuthModal from './components/Auth.vue';
+import HomeView from './views/HomeView.vue';
 
 export default {
   name: 'App',
-  components: { AppHeader, AuthModal },
+  components: { AppHeader, AuthModal, HomeView },
   created() {
     this.$store.dispatch('init_login');
   },

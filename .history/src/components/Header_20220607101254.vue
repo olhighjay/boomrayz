@@ -16,7 +16,7 @@
           </li>
           <template v-else>
             <li>
-              <router-link class="px-2 text-white" to="/manage">Manage</router-link>
+              <router-link class="px-2 text-white" to="/">Manage</router-link>
             </li>
             <li>
               <a @click.prevent="signout" class="px-2 text-white" href="javascript:;">Logout</a>
