@@ -70,7 +70,7 @@ export default {
 
         const storageRef = storage.ref();
         const songsRef = storageRef.child(`songs/${file.name}`);
-        songsRef.put(file);
+        songsRef.put();
       });
     },
   },

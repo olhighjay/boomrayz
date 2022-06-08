@@ -50,7 +50,7 @@
 </template>
 
 <script>
-import { storage } from '@/includes/firebase';
+import { storage } from '@includes/firebase';
 
 export default {
   name: 'UploadComponent',
@@ -63,14 +63,13 @@ export default {
     upload($event) {
       this.is_dragover = false;
       const files = [...$event.dataTransfer.files];
+      console.log(files);
       files.forEach((file) => {
-        if (file.type !== 'audio/mpeg') {
-          return;
-        }
+          if(file.type !== 'audio/mpeg') {
+              return;
+          }
 
-        const storageRef = storage.ref();
-        const songsRef = storageRef.child(`songs/${file.name}`);
-        songsRef.put(file);
+          const storageRef = storage.ref();
       });
     },
   },

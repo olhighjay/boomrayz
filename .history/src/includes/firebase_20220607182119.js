@@ -25,5 +25,4 @@ export {
   auth,
   db,
   usersCollection,
-  storage,
 };
