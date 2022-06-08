@@ -26,13 +26,10 @@
             <!-- Progess Bars -->
             <div class="mb-4" v-for="upload in uploads" :key="upload.name">
               <!-- File Name -->
-              <div class="font-bold text-sm" :class="upload.text_class">
-                  <i :class="upload.icon"></i>{{ upload.name }}
-                </div>
+              <div class="font-bold text-sm">{{ upload.name }}</div>
               <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
                 <!-- Inner Progress Bar -->
-                <div class="transition-all progress-bar"
-                :class="upload.variant"
+                <div class="transition-all progress-bar bg-blue-400" :class="'bg-blue-400'"
                 :style="{ width: upload.current_progress + '%' }"></div>
               </div>
             </div>
@@ -78,17 +75,13 @@ export default {
         const task = songsRef.put(file);
 
         const uploadIndex = this.uploads.push({
-          task,
-          current_progress: 0,
-          name: file.name,
-          variant: 'bg-blue-400',
-          icon: 'fas fa-spinner fa-spin',
-          text_class: '',
-        }) - 1;
+            task,
+            current_progress: 0,
+            name: file.name,
+        });
 
         task.on('state_changed', (snapshot) => {
-          const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-          this.uploads[uploadIndex].current_progress = progress;
+            const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
         });
       });
     },
