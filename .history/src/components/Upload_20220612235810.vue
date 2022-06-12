@@ -104,7 +104,7 @@ export default {
             comment_count: 0,
           };
 
-          song.url = await task.snapshot.ref.getDownloadURL();
+          song.url = await task.snapshot.ref.getDownloadURL;
           await songsCollection.add(song);
 
           this.uploads[uploadIndex].variant = 'bg-green-400';

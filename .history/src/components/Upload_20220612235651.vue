@@ -104,8 +104,7 @@ export default {
             comment_count: 0,
           };
 
-          song.url = await task.snapshot.ref.getDownloadURL();
-          await songsCollection.add(song);
+          song.url = await task.snapshot.ref.getDownloadURL;
 
           this.uploads[uploadIndex].variant = 'bg-green-400';
           this.uploads[uploadIndex].icon = 'fas fa-check';
