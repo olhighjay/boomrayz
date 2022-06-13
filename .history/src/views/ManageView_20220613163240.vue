@@ -103,10 +103,6 @@ import appUpload from '../components/Upload.vue';
 export default {
   name: 'ManagementComponent',
   components: { appUpload },
-  // beforeRouteLeave(to, from, next) {
-  //   this.$refs.upload.cancelUploads();
-  //   next();
-  // },
 //   beforeRouteEnter(to, from, next) {
 //     if (store.state.userLoggedIn) {
 //       next();

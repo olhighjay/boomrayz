@@ -39,6 +39,18 @@
                 :style="{ width: upload.current_progress + '%' }"></div>
               </div>
             </div>
+            <div class="mb-4">
+              <div class="font-bold text-sm">Just another song.mp3</div>
+              <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
+                <div class="transition-all progress-bar bg-blue-400" style="width: 35%"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="font-bold text-sm">Just another song.mp3</div>
+              <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
+                <div class="transition-all progress-bar bg-blue-400" style="width: 55%"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -104,16 +116,6 @@ export default {
         });
       });
     },
-    cancelUploads() {
-      this.uploads.forEach((upload) => {
-        upload.task.cancel();
-      });
-    },
-  },
-  beforeUnmount() {
-    this.uploads.forEach((upload) => {
-      upload.task.cancel();
-    });
   },
 };
 </script>

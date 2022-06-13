@@ -22,9 +22,7 @@
             >
               <h5>Drop your files here</h5>
             </div>
-            <label for="file">
-              <input type="file" id="file" multiple @change="upload($event)">
-            </label>
+            <input type="" name="" value="">
             <hr class="my-6" />
             <!-- Progess Bars -->
             <div class="mb-4" v-for="upload in uploads" :key="upload.name">
@@ -37,6 +35,18 @@
                 <div class="transition-all progress-bar"
                 :class="upload.variant"
                 :style="{ width: upload.current_progress + '%' }"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="font-bold text-sm">Just another song.mp3</div>
+              <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
+                <div class="transition-all progress-bar bg-blue-400" style="width: 35%"></div>
+              </div>
+            </div>
+            <div class="mb-4">
+              <div class="font-bold text-sm">Just another song.mp3</div>
+              <div class="flex h-4 overflow-hidden bg-gray-200 rounded">
+                <div class="transition-all progress-bar bg-blue-400" style="width: 55%"></div>
               </div>
             </div>
           </div>
@@ -58,7 +68,7 @@ export default {
   methods: {
     upload($event) {
       this.is_dragover = false;
-      const files = $event.dataTransfer ? [...$event.dataTransfer.files] : [...$event.target.files];
+      const files = [...$event.dataTransfer.files];
       files.forEach((file) => {
         if (file.type !== 'audio/mpeg') {
           return;
@@ -104,16 +114,6 @@ export default {
         });
       });
     },
-    cancelUploads() {
-      this.uploads.forEach((upload) => {
-        upload.task.cancel();
-      });
-    },
-  },
-  beforeUnmount() {
-    this.uploads.forEach((upload) => {
-      upload.task.cancel();
-    });
   },
 };
 </script>
