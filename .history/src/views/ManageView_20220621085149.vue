@@ -11,7 +11,7 @@
           <div class="p-6">
             <!-- Composition Items -->
             <composition-item v-for="(song, i) in songs" :key="song.docID"
-            :song="song" :updateSong="updateSong" :index="i"></composition-item>
+            :song="song" :updateSong="üpdateSong" :index="i"></composition-item>
           </div>
         </div>
       </div>
