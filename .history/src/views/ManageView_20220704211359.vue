@@ -12,7 +12,7 @@
             <!-- Composition Items -->
             <composition-item v-for="(song, i) in songs" :key="song.docID"
             :song="song" :updateSong="updateSong" :index="i"
-            :removeSong="removeSong"></composition-item>
+            ></composition-item>
           </div>
         </div>
       </div>
@@ -50,9 +50,6 @@ export default {
     updateSong(i, values) {
       this.songs[i].modified_name = values.modified_name;
       this.songs[i].genre = values.genre;
-    },
-    removeSong(i) {
-      this.songs.splice(i, 1);
     },
   },
   // beforeRouteLeave(to, from, next) {

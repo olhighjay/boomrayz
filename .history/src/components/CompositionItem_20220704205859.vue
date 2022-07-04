@@ -48,7 +48,7 @@
 </template>
 
 <script>
-import { songsCollection, storage } from '@/includes/firebase';
+import { songsCollection } from '@/includes/firebase';
 
 export default {
   name: 'CompositionItem',
@@ -63,10 +63,6 @@ export default {
     },
     index: {
       type: Number,
-      required: true,
-    },
-    removeSong: {
-      type: Function,
       required: true,
     },
   },
@@ -102,16 +98,6 @@ export default {
       this.in_submission = false;
       this.alert_variant = 'bg-green-500';
       this.alert_message = 'Success!.';
-    },
-    async deleteSong() {
-      const storageRef = storage.ref();
-      const songRef = storageRef.child(`songs/${this.song.original_name}`);
-
-      await songRef.delete();
-
-      await songsCollection.doc(this.song.docID).delete();
-
-      this.removeSong(this.index);
     },
   },
 };

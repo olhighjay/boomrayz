@@ -67,8 +67,8 @@ export default {
     },
     removeSong: {
       type: Function,
-      required: true,
-    },
+      required: false,
+    }
   },
   data() {
     return {
@@ -110,8 +110,6 @@ export default {
       await songRef.delete();
 
       await songsCollection.doc(this.song.docID).delete();
-
-      this.removeSong(this.index);
     },
   },
 };

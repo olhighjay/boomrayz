@@ -110,8 +110,6 @@ export default {
       await songRef.delete();
 
       await songsCollection.doc(this.song.docID).delete();
-
-      this.removeSong(this.index);
     },
   },
 };
