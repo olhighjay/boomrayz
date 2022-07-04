@@ -32,7 +32,14 @@ export default {
   async created() {
     const snapshot = await songsCollection.where('uid', '==', auth.currentUser.uid).get();
 
-    snapshot.forEach(this.addSong);
+    snapshot.forEach((document) => {
+      const song = {
+        ...document.data(),
+        docID: document.id,
+      };
+
+      this.songs.push(song);
+    });
   },
   data() {
     return {
@@ -47,13 +54,8 @@ export default {
     removeSong(i) {
       this.songs.splice(i, 1);
     },
-    addSong(document) {
-      const song = {
-        ...document.data(),
-        docID: document.id,
-      };
+    addSong() {
 
-      this.songs.push(song);
     },
   },
   // beforeRouteLeave(to, from, next) {

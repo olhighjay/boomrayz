@@ -48,6 +48,7 @@ export default {
       this.songs.splice(i, 1);
     },
     addSong(document) {
+      console.log(document);
       const song = {
         ...document.data(),
         docID: document.id,

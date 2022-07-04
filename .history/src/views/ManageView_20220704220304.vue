@@ -32,7 +32,7 @@ export default {
   async created() {
     const snapshot = await songsCollection.where('uid', '==', auth.currentUser.uid).get();
 
-    snapshot.forEach(this.addSong);
+    snapshot.forEach(this.addSong());
   },
   data() {
     return {

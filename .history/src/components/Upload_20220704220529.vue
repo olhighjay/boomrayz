@@ -99,7 +99,7 @@ export default {
           song.url = await task.snapshot.ref.getDownloadURL();
           const songRef = await songsCollection.add(song);
 
-          const songSnapshot = await songRef.get();
+          const songSnapshot = songRef.get();
 
           this.addSong(songSnapshot);
 
