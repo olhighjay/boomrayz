@@ -102,7 +102,7 @@ export default {
       }
 
       this.updateSong(this.index, values);
-      this.updateUnsavedFlag(false);
+      this.updateUnsavedFlag(true);
 
       this.in_submission = false;
       this.alert_variant = 'bg-green-500';

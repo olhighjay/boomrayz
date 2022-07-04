@@ -67,7 +67,6 @@ export default {
     } else {
       // eslint-disable-next-line no-restricted-globals
       const leave = confirm('You have unsaved changes. Are you sure you want to leave?');
-      next(leave);
     }
   },
   // beforeRouteLeave(to, from, next) {

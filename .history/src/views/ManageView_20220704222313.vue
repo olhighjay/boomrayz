@@ -12,8 +12,7 @@
             <!-- Composition Items -->
             <composition-item v-for="(song, i) in songs" :key="song.docID"
             :song="song" :updateSong="updateSong" :index="i"
-            :removeSong="removeSong"
-            :updateUnsavedFlag="updateUnsavedFlag"></composition-item>
+            :removeSong="removeSong"></composition-item>
           </div>
         </div>
       </div>
@@ -58,17 +57,11 @@ export default {
       this.songs.push(song);
     },
     updateUnsavedFlag(value) {
-      this.unsavedFlag = value;
+      this.
     },
   },
-  beforeRouteLeave(to, from, next) {
-    if (!this.unsavedFlag) {
-      next();
-    } else {
-      // eslint-disable-next-line no-restricted-globals
-      const leave = confirm('You have unsaved changes. Are you sure you want to leave?');
-      next(leave);
-    }
+  beforeRouteLeave (to, from, next) {
+    // ...
   },
   // beforeRouteLeave(to, from, next) {
   //   this.$refs.upload.cancelUploads();
